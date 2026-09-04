@@ -1,0 +1,199 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0a0a0f;
+  color: #e8e8f0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: none;
+  user-select: none;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  background: #0a0a0f;
+}
+
+#game {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: calc(12px + env(safe-area-inset-top, 0px)) 16px 8px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+#hud.hidden {
+  display: none;
+}
+
+.hud-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+#score {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+#best {
+  font-size: 0.85rem;
+  opacity: 0.55;
+  font-variant-numeric: tabular-nums;
+}
+
+.combo {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #7dd3fc;
+  text-shadow: 0 0 12px rgba(125, 211, 252, 0.45);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.combo.hidden {
+  opacity: 0;
+  transform: scale(0.85);
+}
+
+.combo.pop {
+  animation: combo-pop 0.28s ease;
+}
+
+@keyframes combo-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+#overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  background: rgba(8, 8, 14, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 24px;
+}
+
+#overlay.hidden {
+  display: none;
+  pointer-events: none;
+}
+
+.panel {
+  text-align: center;
+  max-width: 320px;
+  width: 100%;
+}
+
+.panel.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.4rem;
+  background: linear-gradient(180deg, #f0f4ff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+}
+
+.tagline {
+  opacity: 0.65;
+  font-size: 0.95rem;
+  margin-bottom: 1.75rem;
+  line-height: 1.4;
+}
+
+.hint {
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+  opacity: 0.4;
+}
+
+.final-score {
+  font-size: 3rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.25rem;
+}
+
+.final-best {
+  opacity: 0.55;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  appearance: none;
+  border: none;
+  background: #e8e8f0;
+  color: #0a0a0f;
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.85rem 2.25rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 4px 24px rgba(232, 232, 240, 0.18);
+  min-height: 48px;
+  min-width: 160px;
+  touch-action: manipulation;
+}
+
+button:hover {
+  background: #fff;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 2px 12px rgba(232, 232, 240, 0.12);
+}
+
+button:focus-visible {
+  outline: 2px solid #7dd3fc;
+  outline-offset: 3px;
+}
