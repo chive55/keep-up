@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0a0a0f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Keep Up</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game" aria-label="Keep Up game canvas"></canvas>
+      <div id="hud" class="hidden">
+        <div class="hud-row">
+          <span id="score">0</span>
+          <span id="combo" class="combo hidden"></span>
+          <span id="best">Best 0</span>
+        </div>
+      </div>
+      <div id="overlay">
+        <div id="title-screen" class="panel">
+          <h1>Keep Up</h1>
+          <p class="tagline">Tap under the ball. Don't let it drop.</p>
+          <button id="btn-begin" type="button">Begin</button>
+          <p class="hint">Tap / click / Space » P or Esc to pause</p>
+        </div>
+        <div id="pause-screen" class="panel hidden">
+          <h2>Paused</h2>
+          <button id="btn-resume" type="button">Resume</button>
+        </div>
+        <div id="gameover-screen" class="panel hidden">
+          <h2>Game Over</h2>
+          <p id="final-score" class="final-score">0</p>
+          <p id="final-best" class="final-best">Best 0</p>
+          <button id="btn-again" type="button">Play again</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
