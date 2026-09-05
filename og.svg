@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A0A0F"/>
+      <stop offset="55%" stop-color="#0A0C16"/>
+      <stop offset="100%" stop-color="#14101A"/>
+    </linearGradient>
+    <linearGradient id="cellOn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF4C8"/>
+      <stop offset="40%" stop-color="#7DD3FC"/>
+      <stop offset="100%" stop-color="#8A5A10"/>
+    </linearGradient>
+    <linearGradient id="cellOff" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1C2032"/>
+      <stop offset="100%" stop-color="#121526"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="120" r="240" fill="#7DD3FC" opacity="0.10" filter="url(#soft)"/>
+  <rect x="678" y="108" width="444" height="444" rx="28" fill="#0B1020" stroke="#ffffff18" stroke-width="2"/>
+<circle cx="775.7" cy="232.3" r="18" fill="url(#cellOn)" filter="url(#glow)"/>
+<circle cx="922.2" cy="205.7" r="14" fill="url(#cellOff)"/>
+<circle cx="1024.3" cy="276.7" r="20" fill="url(#cellOn)" filter="url(#glow)"/>
+<circle cx="811.2" cy="365.5" r="16" fill="url(#cellOn)" filter="url(#glow)"/>
+<circle cx="953.3" cy="383.3" r="22" fill="url(#cellOn)" filter="url(#glow)"/>
+<circle cx="1033.2" cy="454.3" r="12" fill="url(#cellOff)"/>
+<circle cx="757.9" cy="463.2" r="15" fill="url(#cellOn)" filter="url(#glow)"/>
+  
+  <rect x="72" y="72" width="16" height="16" fill="#7DD3FC"/>
+  <text x="100" y="86" fill="#9AA3C7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" letter-spacing="5">BROWSER GAME</text>
+  <text x="72" y="268" fill="#F4F6FF" font-family="ui-sans-serif, system-ui, sans-serif" font-size="78" font-weight="800">KEEP</text>
+  <text x="72" y="342.1" fill="#7DD3FC" font-family="ui-sans-serif, system-ui, sans-serif" font-size="78" font-weight="800" filter="url(#glow)">UP</text>
+  <text x="72" y="388.9" fill="#C9D0F0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28">Tap under the ball. Don&#x27;t let it drop.</text>
+  <rect x="72" y="468" rx="10" ry="10" width="268" height="54" fill="#7DD3FC"/>
+  <text x="206.0" y="504" text-anchor="middle" fill="#0B0C14" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700">PLAY IN BROWSER</text>
+
+</svg>
